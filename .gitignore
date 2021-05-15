@@ -1,4 +1,4 @@
-_site/
+easeaza/
 node_modules/
 cfg/*.dev.json
 cfg/*.prod.json
