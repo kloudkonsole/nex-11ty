@@ -1,0 +1,13 @@
+{
+	"version": "0.1.0",
+	"scripts": {},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+		"lean-wrap": "^0.2.33",
+		"pico-args": "^1.0.13",
+		"pico-client": "^0.6.6",
+		"pico-common": "^0.10.30",
+		"tailwindcss": "^2.0.4"
+	}
+}

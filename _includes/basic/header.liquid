@@ -1,0 +1,49 @@
+<header class="fixed w-full z-50 transition duration-500">
+	<!-- menu -->
+	<div class="container z-10 left-0 right-0 top-0 flex justify-between py-6 items-baseline">
+	<div>
+		<a class="cursor-pointer" href="/">
+		<img alt="logo" class="h-12" src="{{logoSrc}}"/>
+		</a>
+	</div>
+	<ul class="hidden sm:flex" id="menu">
+		{% for item in settings.menu %}
+		<li class="px-4">
+			<a class="hover:text-primary transition duration-300 text-white" href="{{settings.meta.siteUrl | append: item.url}}">{{item.name}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<div class="hidden sm:block socials">
+		{% for item in settings.socials %}
+		<a href="{{item.url}}" class="text-white hover:text-primary transition duration-500 mr-5">
+			<ion-icon name="{{item.icon}}" class="text-xl"></ion-icon>
+		</a>
+		{% endfor %}
+	</div>
+	<button id=overlayMenuBtn class="hover:opacity-60 sm:hidden text-white transition duration-300 outline-none focus:outline-none">
+		<ion-icon class="text-2xl" name="menu-outline"></ion-icon>
+	</button>
+	</div>
+
+	<div class="fixed overlay-menu inset-0" id="nav-menu" style="z-index: 9999;">
+	<div id=overlayMenu class="absolute flex flex-col items-center justify-center inset-0" id="nav-menu-wrapper">
+		<button aria-label="Close Menu" class="absolute right-0 top-0 p-1 transition duration-300 text-secondary opacity-75 hover:opacity-50 focus:outline-none" style="margin-right:24px;margin-top:24px">
+		<ion-icon class="text-3xl" name="close-outline"></ion-icon>
+		</button>
+		<ul class="mb-6" id="nav-item">
+		{% for item in settings.menu %}
+			<li class="px-4 py-2">
+			<a class="hover:text-primary transition duration-300" href="{{item.url}}" >{{item.name}}</a>
+			</li>
+		{% endfor %}
+		</ul>
+		<div class="">
+		{% for item in settings.socials %}
+			<a href="{{item.url}}" class="text-gray-600 hover:opacity-80 transition duration-500 mx-4">
+			<ion-icon name="{{item.icon}}" class="text-xl"></ion-icon>
+			</a>
+		{% endfor %}
+		</div>
+	</div>
+	</div>
+</header>

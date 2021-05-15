@@ -1,0 +1,27 @@
+<section class='min-h-screen relative overflow-hidden w-full'>
+  <div class='w-full h-full absolute z-10 bg-opacity-30 bg-black'>
+    <div class='container w-full h-full  flex flex-col justify-center items-start '>
+      <div class='md:w-1/2'>
+        <h1 class='text-3xl sm:text-5xl text-white font-semibold leading-tight mb-3' data-aos-duration='800' data-aos='fade-right'>
+          {{ title }}
+        </h1>
+        <p class='text-md sm:text-lg text-white mb-10' data-aos-delay='600' data-aos-duration='1000' data-aos='fade-right'>
+          {{ description }}
+        </p>
+        <span data-aos-delay='900' data-aos='fade-up'>
+          <a class='duration-300 transition border-primary border-2 text-white font-medium py-3 px-10 hover:bg-primary' href='#collections'>
+            Shop Now
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <video autoplay class='absolute w-full h-full object-cover object-center' loop muted src='/assets/images/video.mp4'></video>
+  
+  <div class='absolute text-center bottom-10 w-full z-20'>
+    <a href='#collections'>
+      <ion-icon class='text-white text-4xl animate-bounce cursor-pointer hover:opacity-60 transition duration-300' name='chevron-down-outline'></ion-icon>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,5 @@
+_site/
+node_modules/
+cfg/*.dev.json
+cfg/*.prod.json
+.DS_Store
